@@ -1,3 +1,3 @@
 # Maze
-console labyrinth [x]
+console labyrinth 
 ### Фролов Дима ИП-22-3
