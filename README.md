@@ -1,3 +1,3 @@
 # Maze
-pseudo-three-dimensional labyrinth
+cli labyrinth
 ### Фролов Дима ИП-22-3
