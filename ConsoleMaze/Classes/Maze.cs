@@ -41,12 +41,12 @@ public class Maze
         }
     }
 
-    public void SelectRandomMap() // ← новый метод
+    public void SelectRandomMap()
     {
         currentMap = maps[random.Next(maps.Count)];
     }
 
-    public char[,] GetCurrentMap() // ← метод для Player
+    public char[,] GetCurrentMap()
     {
         return currentMap;
     }

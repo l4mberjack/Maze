@@ -1,15 +1,33 @@
-﻿namespace ConsoleMaze.Classes;
+﻿using ConsoleMaze.Services;
+
+namespace ConsoleMaze.Classes;
 
 public class Player
 {
     public int PlayerRow { get; set; } = 1;
     public int PlayerCol { get; set; } = 1;
     private char[,] currentMap;
+    private Dictionary<ConsoleKey, IMovable> moves;
 
     public Player(char[,] map)
     {
         currentMap = map;
         SetStartPosition();
+        moves = new Dictionary<ConsoleKey, IMovable>
+        {
+            { ConsoleKey.UpArrow, new MoveUp() },
+            { ConsoleKey.DownArrow, new MoveDown() },
+            { ConsoleKey.LeftArrow, new MoveLeft() },
+            { ConsoleKey.RightArrow, new MoveRight() },
+        };
+    }
+
+    public void Move(ConsoleKey key)
+    {
+        if (moves.ContainsKey(key))
+        {
+            moves[key].MakeMove(this);
+        }
     }
 
     public void SetStartPosition()
