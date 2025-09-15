@@ -1,3 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
+Console.WriteLine("Maze map");
+Console.WriteLine("==================================================");
 
-Console.WriteLine("Hello, World!");
+Maze maze = new();
+maze.InitMapsList();
+maze.PrintMap();
+Console.ReadKey();
