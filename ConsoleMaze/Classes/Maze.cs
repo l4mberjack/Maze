@@ -12,8 +12,7 @@ public class Maze
     {
         for (int i = 1; i < 6; i++)
         {
-            var filePath = @"C:\Users\mimit\RiderProjects\ConsoleMaze\ConsoleMaze\Maps\maze" +  i + ".txt";
-            //var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Maps", $"maze{i}.txt");
+            var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Maps", $"maze{i}.txt");
             var lines = File.ReadAllLines(filePath);
             int rows = lines.Length;
             int cols = lines[0].Length;
@@ -27,18 +26,6 @@ public class Maze
             maps.Add(maze);
         }
     }
-
-    // public void PrintMap()
-    // {
-    //     for (int r = 0; r < currentMap.GetLength(0); r++)
-    //     {
-    //         for (int c = 0; c < currentMap.GetLength(1); c++)
-    //         {
-    //             Console.Write(currentMap[r, c]);
-    //         }
-    //         Console.WriteLine();
-    //     }
-    // }
 
     public void SelectRandomMap()
     {
