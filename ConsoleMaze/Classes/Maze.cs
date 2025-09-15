@@ -5,6 +5,7 @@ public class Maze
 {
     private Random random = new();
     private List<char[,]> maps = new();
+    private char[,] currentMap;
 
 
     public void InitMapsList()
@@ -38,6 +39,15 @@ public class Maze
             }
             Console.WriteLine();
         }
+    }
 
+    public void SelectRandomMap() // ← новый метод
+    {
+        currentMap = maps[random.Next(maps.Count)];
+    }
+
+    public char[,] GetCurrentMap() // ← метод для Player
+    {
+        return currentMap;
     }
 }

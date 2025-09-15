@@ -12,7 +12,7 @@ public class Player
         SetStartPosition();
     }
 
-    private void SetStartPosition()
+    public void SetStartPosition()
     {
         for (int r = 0; r < currentMap.GetLength(0); r++)
         {
