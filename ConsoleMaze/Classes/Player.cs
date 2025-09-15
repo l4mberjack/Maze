@@ -4,8 +4,8 @@ namespace ConsoleMaze.Classes;
 
 public class Player
 {
-    public int PlayerRow { get; set; } = 1;
-    public int PlayerCol { get; set; } = 1;
+    public int PlayerRow { get; set; }
+    public int PlayerCol { get; set; }
     private char[,] currentMap;
     private Dictionary<ConsoleKey, IMovable> moves;
 

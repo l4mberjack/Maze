@@ -19,11 +19,34 @@ public class Game
     public void GameStart()
     {
         GameInit();
-        maze.PrintMap();
         while (gameIsGoing)
         {
+            Console.Clear();
+            PrintMapWithPlayer();
             HandleManage();
             CheckExit();
+        }
+    }
+
+    private void PrintMapWithPlayer()
+    {
+        char[,] currentMap = maze.GetCurrentMap();
+        var (playerRow, playerCol) = player.GetCurrentPosition();
+
+        for (int r = 0; r < currentMap.GetLength(0); r++)
+        {
+            for (int c = 0; c < currentMap.GetLength(1); c++)
+            {
+                if (r == playerRow && c == playerCol)
+                {
+                    Console.Write('@');
+                }
+                else
+                {
+                    Console.Write(currentMap[r, c]);
+                }
+            }
+            Console.WriteLine();
         }
     }
 

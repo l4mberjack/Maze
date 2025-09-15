@@ -28,18 +28,17 @@ public class Maze
         }
     }
 
-    public void PrintMap()
-    {
-        var mapToPrint = maps[random.Next(maps.Count)];
-        for (int r = 0; r < mapToPrint.GetLength(0); r++)
-        {
-            for (int c = 0; c < mapToPrint.GetLength(1); c++)
-            {
-                Console.Write(mapToPrint[r, c]);
-            }
-            Console.WriteLine();
-        }
-    }
+    // public void PrintMap()
+    // {
+    //     for (int r = 0; r < currentMap.GetLength(0); r++)
+    //     {
+    //         for (int c = 0; c < currentMap.GetLength(1); c++)
+    //         {
+    //             Console.Write(currentMap[r, c]);
+    //         }
+    //         Console.WriteLine();
+    //     }
+    // }
 
     public void SelectRandomMap()
     {
