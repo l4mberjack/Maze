@@ -1,8 +1,8 @@
 ﻿
+using ConsoleMaze.Classes;
+
 Console.WriteLine("Maze map");
 Console.WriteLine("==================================================");
+var game = new Game();
 
-Maze maze = new();
-maze.InitMapsList();
-maze.PrintMap();
 Console.ReadKey();
