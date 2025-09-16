@@ -43,10 +43,25 @@ public class Game
                 }
                 else
                 {
-                    Console.Write(currentMap[r, c]);
+                    char symbol = currentMap[r, c];
+                    char displaySymbol = GetSymbol(symbol);
+                    Console.Write(displaySymbol);
                 }
             }
             Console.WriteLine();
+        }
+    }
+
+    private char GetSymbol(char symbol)
+    {
+        switch (symbol)
+        {
+            case '#':
+                return '█';
+            case 'E':
+                return 'S';
+            default:
+                return symbol;
         }
     }
 
